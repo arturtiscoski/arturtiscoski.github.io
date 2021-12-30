@@ -7,7 +7,7 @@ import Suspense from '../suspense/Suspense';
 class AppRouter extends Component {
   render() {
     const { match } = this.props;
-    console.log('match', match);
+
     return (
       <Router>
         <Suspense>

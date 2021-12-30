@@ -30,18 +30,17 @@ function Search() {
   }, [search]);
 
   const fetch = (params = { page: 1 }) => {
-    console.log('params', params);
+
     if (!params.search) {
       params = {...params, search}
     }
-    console.log('params depoix', params);
+
     setLoading(true)
     http('https://swapi.dev/api/people/', {
       method: 'GET',
       params,
       api: false
     }).then((result) => {
-      console.log('result', result);
       setData(result.results);
       setTotal(result.count);
       setLoading(false);

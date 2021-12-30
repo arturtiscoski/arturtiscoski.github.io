@@ -33,7 +33,6 @@ function SearchDetalhes({ data, children }) {
     if (visible && data) {
       setLoading(true);
       let films = []
-      console.log('data', data);
 
       for (let i = 0; i < data.films.length; i++) {
         const film = data.films[i];
