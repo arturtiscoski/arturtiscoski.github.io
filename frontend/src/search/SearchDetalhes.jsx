@@ -98,10 +98,10 @@ function SearchDetalhes({ data, children }) {
                       Male  
                     </Radio.Button>
                     <Radio.Button value='female'>
-                      {sizeScreen == 'lg' ? 'Female' : 'Fem.'}
+                      {sizeScreen == 'xl' || sizeScreen == 'lg' ? 'Female' : 'Fem.'}
                     </Radio.Button>
                     <Radio.Button value='unknown'>
-                      {sizeScreen == 'lg' ? 'unknown' : 'unk.'}
+                      {sizeScreen == 'xl' || sizeScreen == 'lg' ? 'unknown' : 'unk.'}
                     </Radio.Button>
                     <Radio.Button value='n/a'>
                       n/a
