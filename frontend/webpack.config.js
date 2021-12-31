@@ -70,8 +70,12 @@ module.exports = {
         }]
       },
       {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        test: /\.(png|jpe?g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       }
     ]
   },

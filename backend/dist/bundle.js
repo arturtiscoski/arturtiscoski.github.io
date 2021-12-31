@@ -201,6 +201,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./img/favicon.png":
+/*!*************************!*\
+  !*** ./img/favicon.png ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"bf1b6282773c565da541df903603e99e.png\");\n\n//# sourceURL=webpack:///./img/favicon.png?");
+
+/***/ }),
+
 /***/ "./node_modules/@ant-design/colors/dist/index.esm.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@ant-design/colors/dist/index.esm.js ***!
@@ -3008,7 +3020,31 @@ eval("module.exports = function (module) {\n  if (!module.webpackPolyfill) {\n  
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _suspense_Suspense__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./suspense/Suspense */ \"./src/suspense/Suspense.jsx\");\n\n\nvar Root = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__[\"lazy\"])(function () {\n  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./root/Root */ \"./src/root/Root.jsx\"));\n});\n\nvar App = function App() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suspense_Suspense__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Root, null));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _suspense_Suspense__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./suspense/Suspense */ \"./src/suspense/Suspense.jsx\");\n/* harmony import */ var _consys_documentTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./consys/documentTitle */ \"./src/consys/documentTitle.jsx\");\n/* harmony import */ var _consys_favicon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./consys/favicon */ \"./src/consys/favicon.jsx\");\n/* harmony import */ var _img_favicon_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/favicon.png */ \"./img/favicon.png\");\n\n\n\n\n\nvar Root = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__[\"lazy\"])(function () {\n  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./root/Root */ \"./src/root/Root.jsx\"));\n});\n\nvar App = function App() {\n  Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\n    _consys_favicon__WEBPACK_IMPORTED_MODULE_3__[\"default\"].set({\n      url: _img_favicon_png__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n    });\n    _consys_documentTitle__WEBPACK_IMPORTED_MODULE_2__[\"default\"].set(\"Star wars\");\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_suspense_Suspense__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Root, null));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+
+/***/ }),
+
+/***/ "./src/consys/documentTitle.jsx":
+/*!**************************************!*\
+  !*** ./src/consys/documentTitle.jsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar documentTitle = {\n  set: function set(str) {\n    var title = str;\n    var link = document.querySelector(\"title\") || document.createElement('title');\n    link.innerHtml = title;\n    document.title = title;\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (documentTitle);\n\n//# sourceURL=webpack:///./src/consys/documentTitle.jsx?");
+
+/***/ }),
+
+/***/ "./src/consys/favicon.jsx":
+/*!********************************!*\
+  !*** ./src/consys/favicon.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar favicon = {\n  set: function set(cfg) {\n    var url = cfg.url,\n        type = cfg.type,\n        rel = cfg.rel;\n    var link = document.querySelector(\"link[rel*='icon']\") || document.createElement('link');\n    link.type = type || 'image/x-icon';\n    link.rel = rel || 'shortcut icon';\n    link.href = url;\n    document.getElementsByTagName('head')[0].appendChild(link);\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (favicon);\n\n//# sourceURL=webpack:///./src/consys/favicon.jsx?");
 
 /***/ }),
 

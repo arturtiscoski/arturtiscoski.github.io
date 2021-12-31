@@ -3,11 +3,9 @@ import { Row, Card, Col, Input, notification, Pagination } from 'antd';
 import http from '../consys/http';
 import Screen from '../consys/Screen';
 import CardItem from '../consys/CardItem';
-import documentTitle from '../consys/documentTitle';
 import searchCss from './search.css';
 import utilsCss from "../consys/utils.css";
 import SearchItem from './SearchItem';
-
 const urlSearch = '/painel/search';
 
 function Search() {
@@ -15,10 +13,6 @@ function Search() {
   const [search, setSearch] = useState('');
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    documentTitle.set("Star wars");
-  }, [])
 
   useEffect(() => {
     const timeout = setTimeout(() => {

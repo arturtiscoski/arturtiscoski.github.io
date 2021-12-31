@@ -1,12 +1,14 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Row, Modal, Form, Input, Col, Table, Radio } from 'antd';
 import PropTypes from 'prop-types';
 import Loading from '../consys/Loading';
 import searchCss from './search.css';
 import utilsCss from '../consys/utils.css'
 import http from '../consys/http';
+import screenSize from "../consys/screenSize";
 
 const FormItem = Form.Item;
+const sizeScreen = screenSize();
 
 function SearchDetalhes({ data, children }) {
   const [visible, setVisible] = useState(false);
@@ -96,10 +98,10 @@ function SearchDetalhes({ data, children }) {
                       Male  
                     </Radio.Button>
                     <Radio.Button value='female'>
-                      Female
+                      {sizeScreen == 'lg' ? 'Female' : 'Fem.'}
                     </Radio.Button>
                     <Radio.Button value='unknown'>
-                      unknown
+                      {sizeScreen == 'lg' ? 'unknown' : 'unk.'}
                     </Radio.Button>
                     <Radio.Button value='n/a'>
                       n/a
